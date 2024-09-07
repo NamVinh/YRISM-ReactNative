@@ -2,6 +2,17 @@
 	"name": "testReactNative",
 	"version": "0.0.1",
 	"private": true,
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"yarn lint",
+			"yarn pretty"
+		]
+	},
 	"scripts": {
 		"pretty": "prettier --write",
 		"format": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\" && prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
