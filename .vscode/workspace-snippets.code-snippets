@@ -1,0 +1,63 @@
+{
+	"React Function Component Props (TS)": {
+		"prefix": "trfcp",
+		"body": [
+			"import { Text, Box } from '@gluestack-ui/themed';",
+			"import { type StackNavigationProp } from '@react-navigation/stack';",
+			"import { type RootStackParamList } from '~/navigation';",
+			"",
+			"type $TM_FILENAME_BASE${0}NavigationProp = StackNavigationProp<RootStackParamList, '$TM_FILENAME_BASE${0}'>;",
+			"type $TM_FILENAME_BASE${0}Props = {navigation: $TM_FILENAME_BASE${0}NavigationProp;};",
+			"",
+			"const $TM_FILENAME_BASE${0} = ({ navigation }: $TM_FILENAME_BASE${0}Props) => {",
+			"  console.log('$TM_FILENAME_BASE${0}',navigation);",
+			"",
+			"  return (",
+			"    <Box>",
+			"      <Text>$TM_FILENAME_BASE${0}</Text>",
+			"    </Box>",
+			"  );",
+			"};",
+			"",
+			"export default $TM_FILENAME_BASE${0};"
+		],
+		"description": "React Function Component with Props in TypeScript"
+	},
+
+	// Styles for component
+	"Styles for component": {
+		"prefix": "styles",
+		"body": [
+			"import { createStyles } from '~/config/gluestack-ui.config';",
+			"",
+			"const useStyles = createStyles({",
+			"$TM_FILENAME_BASE${0}: {",
+			"",
+			"},",
+			"});",
+			"",
+			"export default useStyles;",
+			""
+		],
+		"description": "Styles for component"
+	},
+
+	"Styles for component with token": {
+		"prefix": "stylest",
+		"body": [
+			"import { createStyles } from '~/config/gluestack-ui.config';",
+			"",
+			"const useStyles = createStyles(({ token }) => {",
+			"return {",
+			"$TM_FILENAME_BASE${0}: {",
+			"",
+			"},",
+			"};",
+			"});",
+			"",
+			"export default useStyles;",
+			""
+		],
+		"description": "Styles for component with token"
+	}
+}
